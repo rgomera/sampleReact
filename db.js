@@ -13,6 +13,7 @@ const productionConfig = {
    connectionString: process.env.DATABASE_URL, // from heruko add-ons, heruko provided the environment variable
 };
 
-const pool = new Pool(process.env.NODE_ENV === 'production' ? productionConfig : developmentConfig);
+// const pool = new Pool(process.env.NODE_ENV === 'production' ? productionConfig : developmentConfig);
+const pool = new Pool(productionConfig);
 
 module.exports = pool;

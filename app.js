@@ -15,10 +15,6 @@ if (process.env.NODE_ENV === 'production') {
    app.use(express.static('client/build'));
 }
 
-app.get('/', (req, res) => {
-   res.send(`server is running at PORT:${PORT}`);
-});
-
 app.get('/users', async (req, res) => {
    try {
       const users = await pool.query('SELECT * FROM users');

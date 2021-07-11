@@ -1,0 +1,25 @@
+{
+   "name": "samplereact_heroku_deploy",
+   "version": "1.0.0",
+   "description": "",
+   "main": "index.js",
+   "scripts": {
+      "start": "node app.js",
+      "heroku-postbuild": "cd client && npm install && npm run build",
+      "server": "nodemon app.js"
+   },
+   "keywords": [],
+   "author": "",
+   "license": "ISC",
+   "dependencies": {
+      "cors": "^2.8.5",
+      "dotenv": "^10.0.0",
+      "express": "^4.17.1",
+      "morgan": "^1.10.0",
+      "pg": "^8.6.0"
+   },
+   "engines": {
+      "node": "15.x",
+      "npm": "7.x"
+   }
+}
